@@ -28,7 +28,7 @@ pesoPino alturaMetros = pesoBase alturaMetros + pesoCopa alturaMetros
 type Nombre = String
 type Estatura = Number
 
-type Jovit = (Nombre, Estatura, Fuerza, ViveEnCumbancha)
+type Jovit = (Nombre, Estatura)
 
 bilbo :: Jovit
 bilbo = ("Bilbo", 125)
@@ -64,7 +64,9 @@ bilbo' :: Jovit'
 bilbo' = UnJovit "Bilbo" 125 80 True
 
 conNuevaAltura' :: Jovit' -> Number -> Jovit'
-conNuevaAltura' jovit nuevaAltura = jovit {estatura = nuevaAltura}
+conNuevaAltura' jovit nuevaAltura = jovit {estatura' = nuevaAltura}
+
+--}
 
 --viveEnCumbancha bilbo
 -- > True
